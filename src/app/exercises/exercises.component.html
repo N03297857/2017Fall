@@ -1,0 +1,69 @@
+<div class="container">
+  <div id="grad" class="jumbotron">
+    <h1 class="display-3">Exercises</h1>
+    <hr class="my-4">
+  </div>
+  <div class="jumbotron">
+    <div class="card-deck">
+      <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="assets/img/Deadlift.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Deadlifts</h4>
+          <p class="card-text text-center">Click the button below to add to the list.</p>
+        </div>
+        <div class="card-body text-center">
+          <a (click)="AddToDone('DeadLifts', 0, 0)" id="Adding1" class="btn btn-primary">Add to Done</a>
+        </div>
+
+      </div>
+      <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="assets/img/Squat.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Squats</h4>
+          <p class="card-text text-center">Click the button below to add to the list.</p>
+        </div>
+        <div class="card-body text-center">
+          <a (click)="AddToDone('Squats', 0, 0)" id="Adding2" class="btn btn-primary">Add to Done</a>
+        </div>
+
+      </div>
+      <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="assets/img/BentOverRow.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Bent Over Rows</h4>
+          <p class="card-text text-center">Click the button below to add to the list.</p>
+        </div>
+        <div class="card-body text-center">
+          <a (click)="AddToDone('Bent Over Rows', 0, 0)" id="Adding3" class="btn btn-primary">Add to Done</a>
+        </div>
+      </div>
+      <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="assets/img/BicepCurl.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Bicep Curls</h4>
+          <p class="card-text text-center">Click the button below to add to the list.</p>
+        </div>
+        <div class="card-body text-center">
+          <a (click)="AddToDone('Bicep Curls', 0, 0)" id="Adding4" class="btn btn-primary">Add to Done</a>
+        </div>
+
+      </div>
+    </div>
+    <h1 class="display-3"></h1>
+    <div class="row" [@my-Exercises]="this.ME.myExercises.length">
+      <div class="col-md-5 ">
+        <div class="card text-center">
+          <div class="card-header">
+            My finished Exercisess
+          </div>
+          <ul class="list-group list-group-flush ">
+            <li *ngFor="let x of this.ME.myExercises; index as i" class="list-group-item" (click)="removeFromMyExercises(x)">
+              <span title="Click to remove">{{x.name}}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-5 ">
+      </div>
+    </div>
+  </div>
