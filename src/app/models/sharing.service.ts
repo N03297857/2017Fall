@@ -18,7 +18,7 @@ export class SharingService
     //this.apiRoot = `localhost:4200`;
     window.fbAsyncInit = function() {
       FB.init({
-        appId: "197222957494674",
+        appId: "844756725705138",
         cookie: true,
         xfbml: true,
         version: "v2.11"
