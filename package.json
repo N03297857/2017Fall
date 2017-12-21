@@ -9,7 +9,7 @@
       "webpack jquery-mockup/src/main.js jquery-mockup/dist/bundle.js --optimize-minimize --watch",
     "server": "nodemon --watch server server/index.js",
     "ngc9":
-      "ng serve --public fitnessapp20172-zessed.c9users.io:8080 --host 0.0.0.0 --port $PORT",
+      "ng serve --public webprogrammingfinal-selemens1.c9users.io:8080 --host 0.0.0.0 --port $PORT",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
